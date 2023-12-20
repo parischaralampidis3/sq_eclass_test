@@ -9,22 +9,35 @@ alpine.js
 
 
 
+display Courses 
+----------------
 
--Define route for courses
--------------------------
 i defined a get route in order to index the courses.
+i defined a logic in coursesController that returns a view for courses where i loop the courses
+Also i have seeded the database with dummy and fetch the data from migration columns and display them at the view.
+
+show a course
+------------- 
+i defined a new get route where I defined a course endpoint and a slug parameter for course
+
+
+
+
 
 -Define a Courses controller to create some logic for the courses.
 -------------------------------------------------------------------
 
+-Define route for courses
+-------------------------
 
 -Define entities 
-
-Courses
--------
-
+-----------------
+-Define migrations
+------------------
 -Define migrations for creating the database tables.
 
+-Define factories
+-----------------
 -Define factories for the tables in order to seed the database with dummy data.
 
 
