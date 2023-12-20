@@ -1,0 +1,54 @@
+Test Assignment
+Create a small e-learning platform. 
+
+Stack
+-----
+Laravel
+mysql
+alpine.js
+
+
+
+
+-Define route for courses
+-------------------------
+i defined a get route in order to index the courses.
+
+-Define a Courses controller to create some logic for the courses.
+-------------------------------------------------------------------
+
+
+-Define entities 
+
+Courses
+-------
+
+-Define migrations for creating the database tables.
+
+-Define factories for the tables in order to seed the database with dummy data.
+
+
+
+Your platform must have the following entities (Models):
+    1. Courses
+    2. Students
+    3. Enrolments
+    4. Completions
+Mission
+    • Create a web application (using your favorite framework or not).
+    • Create your entities (models). Think carefully and define the appropriate properties.
+    • Seed your entities with dummy data.
+    • Create:
+        ◦ Courses.
+        ◦ Students.
+        ◦ Enrol 60% of the students to courses randomly.
+        ◦ Mark 50% of enrolled users as completed.
+Finally
+    • Create a documentation file using markdown language in project root folder.
+    • Create a git repository.
+    • Push the app and share it with us (psoukiouroglou@sqlearn.com).
+
+
+
+
+
