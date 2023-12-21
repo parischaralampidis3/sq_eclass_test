@@ -32,7 +32,7 @@
                 <div class="flex flex-row items-center justify-around  text-left mt-0  ">
 
                     <p class=" text-left text-sm">
-                        @if($student->completion === "Y")
+                        @if($student->completion === "Y" && $student->enrollment=="Y")
                     <h3 class="text-left w-full ">{{$student->name}}</h3>
                     <p class="mx-6 text-left text-sm">{{$student->email}}</p>
                     <div class=" text-sm text-gray-800 bg-green-200 w-full p-1">Completed</div>
