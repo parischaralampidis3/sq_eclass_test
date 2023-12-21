@@ -8,19 +8,15 @@ mysql
 alpine.js
 
 
-
 display Courses 
 ----------------
-
-i defined a get route in order to index the courses.
-i defined a logic in coursesController that returns a view for courses where i loop the courses
-Also i have seeded the database with dummy and fetch the data from migration columns and display them at the view.
+I defined a get route in order to index the courses.
+I defined a logic in coursesController that returns a view for courses where I loop the courses.
+Also I have seeded the database with dummy and fetch the data from migration columns and display them at the view.
 
 show a course
 ------------- 
-i defined a new get route where I defined a course endpoint and a slug parameter for course
-
-
+I defined a new get route where I defined a course endpoint and a slug parameter for course.
 
 
 

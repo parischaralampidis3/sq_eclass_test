@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Completions extends Model
 {
     use HasFactory;
+
+
+    
 }

@@ -14,20 +14,13 @@ class Courses extends Model
 
     protected $fillable = [
         'title',
-       
         'excerpt',
         'body'
     ];
     
     public function students(){
-       return $this->belongsTo(Students::class);
+         return $this->belongsToMany(Students::class, 'courses_students', 'course_id', 'student_id');
     }
 
-    public function enrollments(){
-       return $this->hasMany(Enrollments::class);
-    }
 
-    public function completions(){
-        return $this->hasMany(Completions::class);
-    }
 }

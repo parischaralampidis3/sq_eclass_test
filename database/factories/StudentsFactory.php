@@ -14,7 +14,7 @@ class StudentsFactory extends Factory
     public function definition()
     {
         return [
-            'name'=>$this ->faker->sentence(),
+            'name' => $this ->faker->name,
             'email'=>$this->faker->unique->safeEmail(),
             'completion'=>$this->faker->randomElement(['Y','N']),
             'enrollment'=>$this->faker->randomElement(['Y','N']),   
