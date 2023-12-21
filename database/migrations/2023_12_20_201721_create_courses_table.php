@@ -18,7 +18,7 @@ class CreateCoursesTable extends Migration
             $table->string('slug')->unique();
             $table->string('title');
             $table->string('excerpt');
-            $table->string('body');
+            $table->text('body');
             $table->timestamps();
         });
     }

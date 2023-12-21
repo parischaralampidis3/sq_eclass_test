@@ -17,8 +17,8 @@ class CreateStudentsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->boolean('enrollment');
-            $table->boolean('completion');
+            $table->char('enrollment',1);
+            $table->char('completion',1);
             $table->timestamps();
         });
     }

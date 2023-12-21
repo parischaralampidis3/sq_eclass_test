@@ -1,0 +1,23 @@
+<?php
+
+namespace Database\Factories;
+use App\Models\Students;
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+class StudentsFactory extends Factory
+{
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        return [
+            'name'=>$this ->faker->sentence(),
+            'email'=>$this->faker->unique->safeEmail(),
+            'completion'=>$this->faker->randomElement(['Y','N']),
+            'enrollment'=>$this->faker->randomElement(['Y','N']),   
+        ];
+    }
+}
