@@ -3,8 +3,9 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-
-class CoursesFactory extends Factory
+use App\Models\Courses;
+use App\Models\Students;
+class CourseStudentFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -14,10 +15,8 @@ class CoursesFactory extends Factory
     public function definition()
     {
         return [
-            'slug' => $this->faker->slug(),
-            'title' => $this->faker->sentence(),
-            'excerpt' => $this->faker->sentence(),
-            'body' => $this->faker->paragraph()
+            'courses_id' =>Courses::factory(),
+            'students_id' =>Students::factory()
         ];
     }
 }
