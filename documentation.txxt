@@ -7,6 +7,60 @@ Laravel
 mysql
 alpine.js
 
+How to run the application
+--------------------------
+-run in terminal: composer install
+-create an .env and define database
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=sqeclass
+DB_USERNAME=root
+DB_PASSWORD=
+
+run php server
+--------------
+run at terminal: php artisan serve to set php server
+
+define tables at the database
+------------------------------
+run at terminal: php artisan migrate
+
+The project follows MVC architecture. So let me define the project structure.
+
+I have define routing at root folder, a file that handles the routing 
+
+--- /
+-
+-
+-------- web.php
+
+Controllers have defined inside the http folder to handle method logic for the web application.
+
+--- App
+-
+-
+------Http
+-
+-
+--------Controllers
+-
+-
+-----------CoursesController.php
+
+In the e-class app, i have defined elequent models that define the relationships of tables into the database.
+
+---App
+-
+-
+-----Http
+-
+-
+-------Nodels
+
+The models are defined from many to many relationships between the tables at the datatabase.
+                 
 
 display Courses 
 ----------------
