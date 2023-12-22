@@ -15,6 +15,7 @@ class CreateCoursesTable extends Migration
     {
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('student_id');
             $table->string('slug')->unique();
             $table->string('title');
             $table->string('excerpt');
@@ -22,7 +23,6 @@ class CreateCoursesTable extends Migration
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      *

@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Students;
 
 class CoursesFactory extends Factory
 {
@@ -14,10 +15,12 @@ class CoursesFactory extends Factory
     public function definition()
     {
         return [
+            //'student_id' => Students::factory(),
+            'student_id' =>Students::factory(),
             'slug' => $this->faker->slug(),
             'title' => $this->faker->sentence(),
-            'excerpt'=>$this->faker->sentence(),
-            'body'=>$this->faker->paragraph()
+            'excerpt' => $this->faker->sentence(),
+            'body' => $this->faker->paragraph()
         ];
     }
 }

@@ -15,7 +15,7 @@ class CoursesController extends Controller
     }
 
     public function show(Courses $course){
-       $students = Students::latest()->get();
+       $students = $course->students()->latest()->get();
         return view('single_course', [
             'course' => $course,
             'students' => $students
