@@ -11,13 +11,22 @@ class CoursesFactory extends Factory
      *
      * @return array
      */
-    public function definition()
+    
+    
+     /**
+     *The factory accepts an associative array, with model
+     values. So parameters for data generating can be defined 
+     inside the array.
+     *
+     */
+     public function definition()
     {
         return [
             'slug' => $this->faker->slug(),
             'title' => $this->faker->sentence(),
             'excerpt' => $this->faker->sentence(),
-            'body' => $this->faker->paragraph()
+            'body' => $this->faker->paragraph(),
+            'difficulty' => $this->faker->randomElement(['Easy', 'Medium','Hard'])
         ];
     }
 }

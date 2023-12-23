@@ -24,6 +24,11 @@ class Students extends Model
     {
         return $this->belongsToMany(Courses::class,'course_student');
     }
+
+
+    /**
+     * At this methods are defined relationships between Students and Enrollments where a student has many instances of enrollments and completions.
+     */
     public function enrollment()
     {
         return $this->hasMany(Enrollments::class);

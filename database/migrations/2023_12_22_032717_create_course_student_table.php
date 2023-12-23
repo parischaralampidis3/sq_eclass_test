@@ -11,6 +11,13 @@ class CreateCourseStudentTable extends Migration
      *
      * @return void
      */
+
+     /**
+      * Course_student_table works as a pivot table. Model relationships for Students and Courses
+       have defined as many to many. This table defines id for students and courses, in order to 
+       enable association between the two tables.
+      *
+      */
     public function up()
     {
         Schema::create('course_student', function (Blueprint $table) {
@@ -20,7 +27,6 @@ class CreateCourseStudentTable extends Migration
             $table->timestamps();
             $table->foreign('courses_id')->references('id')->on('courses')->onDelete('cascade');
             $table->foreign('students_id')->references('id')->on('students')->onDelete('cascade');
-
             $table->unique(['courses_id', 'students_id']);
         });
     }

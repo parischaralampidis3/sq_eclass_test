@@ -5,6 +5,7 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\Courses;
 use App\Models\Students;
+
 class CourseStudentFactory extends Factory
 {
     /**
@@ -12,11 +13,12 @@ class CourseStudentFactory extends Factory
      *
      * @return array
      */
+
     public function definition()
     {
         return [
-            'courses_id' =>Courses::factory(),
-            'students_id' =>Students::factory()
+            'courses_id' => Courses::factory(),
+            'students_id' => Students::factory()
         ];
     }
 }

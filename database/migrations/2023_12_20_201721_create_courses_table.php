@@ -19,6 +19,7 @@ class CreateCoursesTable extends Migration
             $table->string('title');
             $table->string('excerpt');
             $table->text('body');
+            $table->string('difficulty');
             $table->timestamps();
             
 

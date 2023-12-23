@@ -44,7 +44,7 @@ Controllers have defined inside the http folder to handle method logic for the w
 ------Http
 -
 -
---------Controllers
+--------Controllers    
 -
 -
 -----------CoursesController.php
@@ -57,10 +57,67 @@ In the e-class app, i have defined elequent models that define the relationships
 -----Http
 -
 -
--------Nodels
+------Models
+-
+-
+-------Courses
+-
+-
+--------Students
+-
+-
+--------Enrollments
+-
+-
+---------Completions
 
-The models are defined from many to many relationships between the tables at the datatabase.
-                 
+I have defined migrations, in order to generate tables. So inside migrations i've defined 
+types of colums for the tables.
+
+---database
+-
+-
+---migrations
+-
+-
+----courses_table
+-
+-
+----students_table
+-
+-
+-----course_students_table
+
+
+
+The models are defined from many to many relationships and between the tables at the datatabase.
+Laravel enables generating dummy data for eloquent model. This operations is handled by factories.
+I generating factories for each corresponding model.
+
+---Database
+-
+-
+----Factories
+-
+-
+-----CoursesFactory
+-
+-
+------CourseStudentFactory
+-
+-
+-------StudentsFactory
+
+When factories are defined, seeders can generate dummy data  at the database.
+
+---Database
+-
+-
+----seeders
+-
+-
+-------DatabaseSeeder.php
+
 
 display Courses 
 ----------------
