@@ -4,18 +4,19 @@
 
 
 <div class="container mx-auto">
-    <div class="text-3xl p-3 text-gray-800 ">
+    <div class="flex justify-between text-3xl p-3 text-gray-800 ">
         <h1>Courses Dashboard</h1>
+        <a class="text-sm text-blue-500" href="/">Go at the main page</a>
     </div>
 
     <article class="container">
-        <div class="mx-auto bg-gray-100 text-center w-full p-4 mt-5 mb-10">
-            <h1 class="text-gray-700 text-2xl font-semibold">
+        <div class="mx-auto bg-gray-100 text-center w-full p-10 mt-5 mb-10">
+            <h1 class="text-gray-700 text-2xl text-left mx-24 font-semibold">
                 <a href="/courses/{{$course->slug}}">
                     {{ $course->title }}
                 </a>
             </h1>
-            <h3 class="mt-5 w-full text-left mx-auto">
+            <h3 class="mt-5 w-3/4 text-left mx-24">
                 {{ $course->body }}
             </h3>
         </div>

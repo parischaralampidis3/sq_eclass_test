@@ -21,5 +21,6 @@
         @yield('dashboard-content')
     </div>
   </main>
+  @include('partials.footer')
 </div>
 @endsection
