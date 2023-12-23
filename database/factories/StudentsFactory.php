@@ -12,12 +12,15 @@ class StudentsFactory extends Factory
      * @return array
      */
     public function definition()
-    {
+    {      
+        $enrollment =  $this->faker->randomElement(['Y', 'N']);
+        $completion = ($enrollment === 'N') ? 'N' : $this->faker->randomElement(['Y', 'N']);
+
         return [
             'name' => $this->faker->name,
             'email' => $this->faker->unique()->safeEmail(),
-            'completion' => $this->faker->randomElement(['Y', 'N']),
-            'enrollment' => $this->faker->randomElement(['Y', 'N']),
+            'completion' => $completion,
+            'enrollment' => $enrollment
         ];
     }
 }

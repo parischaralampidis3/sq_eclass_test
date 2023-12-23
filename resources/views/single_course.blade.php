@@ -1,13 +1,11 @@
-@extends('layout')
 
-
-
-@section('content')
+@extends('dashboard')
+@section('dashboard-content')
 
 
 <div class="container mx-auto">
     <div class="text-3xl p-3 text-gray-800 ">
-        <h1>My dashboard</h1>
+        <h1>Courses Dashboard</h1>
     </div>
 
     <article class="container">
@@ -21,38 +19,42 @@
                 {{ $course->body }}
             </h3>
         </div>
-
+<!--This is the view where student information is expected, to be shown.I used again a loop to fetch student information and create small components, to provide information with more clarity-->
     </article>
     <div class="flex">
         <div class="container mx-auto ">
             <h1 class="text-xl  text-left mb-10">Enrolled Completed Students</h1>
             @foreach($students as $student)
-            <div class="flex flex-column bg-gray-50 w-2/4 p-2 justify-center items-center">
-
-                <div class="flex flex-row items-center justify-around  text-left mt-0  ">
-
+            <div class="flex flex-column bg-gray-50 w-4/5 p-2 justify-center items-center">
+<!--One of the tasks requires -->
+                <div class="flex flex-column text-center mt-0  ">
                     <p class=" text-left text-sm">
                         @if($student->completion === "Y" && $student->enrollment=="Y")
                     <h3 class="text-left w-full ">{{$student->name}}</h3>
                     <p class="mx-6 text-left text-sm">{{$student->email}}</p>
                     <div class=" text-sm text-gray-800 bg-green-200 w-full p-1">Completed</div>
+                        @else
+                        <p class="hidden">no records</p>
                     @endif
+
                     </p>
                 </div>
             </div>
             @endforeach
+        
+  
+       
         </div>
-
 
         <div class="container mx-auto ">
             <h1 class="text-xl  text-left mb-5">Enrolled Students</h1>
             @foreach($students as $student)
-            <div class="flex flex-column bg-gray-50 w-2/3 p-2 justify-center items-center">
+            <div class="flex flex-column bg-gray-50 w-3/5 p-2 justify-center items-center">
 
                 <div class="flex flex-row items-center justify-around  text-left mt-2  ">
 
                     <p class="mx-6 text-left text-sm">
-                    <h3 class="text-left w-1/3  ">{{$student->name}}</h3>
+                    <h3 class="text-left w-2/3  ">{{$student->name}}</h3>
                     <p class="mx-6 text-left text-sm">{{$student->email}}</p>
 
 
@@ -65,3 +67,4 @@
 
 
 </div>
+@endsection

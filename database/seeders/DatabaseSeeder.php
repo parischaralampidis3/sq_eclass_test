@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
          */
 
 
-        $students = Students::factory(10)->create();
+        $students = Students::factory(20)->create();
         $courses = Courses::factory(5)->create();
 
         /**
@@ -41,12 +41,16 @@ class DatabaseSeeder extends Seeder
          * I can execute a combine of methods to execute the logic. At first i retrieve a many to many relationship between students and courses($course->students()).
          * Then the students that are already retrieved from the students model, they become attached randomly to the course, using random() method 
          */
-        foreach ($courses as $course) {
-            $studentPercentage = 0.6;
-            $numberOfStudents = $students->count();
-            $numberOfStudentsToAttach = (int) round($numberOfStudents * $studentPercentage);
-            $course->students()->attach($students->random($numberOfStudentsToAttach));
-        }
+  foreach ($courses as $course) {
+    $enrolledStudents = $students->where('enrollment', 'Y')->shuffle();
+
+
+        $studentPercentage = 0.6;
+        $numberOfStudents = $enrolledStudents->count();
+        $numberOfStudentsToAttach = (int) round($numberOfStudents * $studentPercentage);
+        $course->students()->attach($enrolledStudents->take($numberOfStudentsToAttach));
+    
+}
 
 
     }
