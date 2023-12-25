@@ -36,17 +36,13 @@ class CoursesController extends Controller
     public function index()
     {
         $courses = $this -> coursesRepository->get();
-
         return $courses;
      
     }
 
     public function show(Courses $course)
     {
-        $students = $course->students()->latest()->get();
-        return view('single_course', [
-            'course' => $course,
-            'students' => $students
-        ]);
+        $courseData = $this->coursesRepository->show($course);
+        return $courseData;
     }
 }
