@@ -53,7 +53,6 @@
             <div class="flex flex-column bg-gray-50 w-3/5 p-2 justify-center items-center">
 
                 <div class="flex flex-row items-center justify-around  text-left mt-2  ">
-
                     <p class="mx-6 text-left text-sm">
                     <h3 class="text-left w-2/3  ">{{$student->name}}</h3>
                     <p class="mx-6 text-left text-sm">{{$student->email}}</p>
