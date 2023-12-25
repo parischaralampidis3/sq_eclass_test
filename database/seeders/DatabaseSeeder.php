@@ -42,7 +42,23 @@ class DatabaseSeeder extends Seeder
          * Then the students that are already retrieved from the students model, they become attached randomly to the course, using random() method 
          */
   foreach ($courses as $course) {
+  
+
     $enrolledStudents = $students->where('enrollment', 'Y')->shuffle();
+
+    //Brainstorming about 50% enrollment student data
+    
+    // I set a variable for enrollment pencertange
+    // I set a method to count the sum of students
+    // I set an integer and bring a round by execute result of enrolled students with percentage
+    //I have to attach the many to many eloquent relationship and attach the result to enrolled studentsa
+
+
+    // $enrollmentPercentage = 0.5;
+    //  $numberOfEnrolledStudents = $enlrolledStudent->count();
+    // $numberOfEnrolledStudentsToAttach = (int)round($numberOfEnrolledStudents * enrollmentPercentage);
+    //course->students()->attach($numberOfEnrolledStudents->take($numberOfEnrolledStudentsToAttach));
+
 
 
         $studentPercentage = 0.6;
