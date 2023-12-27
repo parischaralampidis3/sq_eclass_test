@@ -3,7 +3,14 @@
 @section('dashboard-content')
 
 <section class="px-6 py-8">
-
+    <section>
+        <div class="text-center">
+            <h1 class="text-2xl text-gray-700 font semibold">Explore the courses</h1>
+            
+            <p class="w-2/3 mt-2 mx-auto">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        </div>
+        
+    </section>
     <section class="py-1 bg-blueGray-50">
         <div class="w-full xl:w-10/12 mb-12 xl:mb-0 px-4 mx-auto mt-24 overflow-x-auto">
             <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 rounded">
