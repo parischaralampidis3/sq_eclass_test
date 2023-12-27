@@ -1,47 +1,87 @@
+
 @extends('dashboard')
+
 @section('dashboard-content')
 
-<div class="container mx-auto">
-    <div class="font-bold text-center p-1 text-gray-800">
-        <h1 class="text-2xl">Explore courses</h1>
-        <p class="text-sm text-center mt-0 font-normal mx-auto leading-6 sm:w-2/3 md:w-1/2 lg:w-1/3">
-            <!-- Your Lorem Ipsum text here -->
-        </p>
-    </div>
+<section class="px-6 py-8">
 
-    @foreach ($courses as $course)
-    <article class="mx-auto bg-gray-100 text-center sm:w-2/3 md:w-1/2 lg:w-1/3 p-10 mt-5">
-        <div class="flex flex-col">
-            <h1 class="text-gray-700 text-2xl w-full font-semibold">
-                <a href="/courses/{{$course->slug}}">
-                    {!! $course->title !!}
-                </a>
-            </h1>
-            <h3 class="mt-5 text-base text-left">
-                {!! $course->excerpt !!}
-            </h3>
-        </div>
+    <section class="py-1 bg-blueGray-50">
+        <div class="w-full xl:w-10/12 mb-12 xl:mb-0 px-4 mx-auto mt-24">
+            <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6  rounded">
+                <div class="rounded-t mb-0 px-4 py-3 border-0">
+                    <div class="flex flex-wrap items-center">
+                        <div class="relative w-full px-4 max-w-full flex-grow flex-1">
+                            <h3 class="font-semibold text-base text-blueGray-700">Appointment List</h3>
+                        </div>
+                  
+                    </div>
+                </div>
 
-        <div class="flex mt-5 items-center">
-            <div x-data="{buttonText:'Add to wishlist'}"
-                class="mr-4 bg-blue-400 p-2 text-sm text-center rounded-lg">
-                <button @click="$el.innerHTML='Added to watchlist!'" class="text-sm font-semibold text-white">
-                    {{ $course->watchlisted ? 'Added to watchlist' : 'Add to watchlist' }}
-                </button>
-            </div>
+                <div class="block w-full overflow-x-auto">
+                    <table class="items-center bg-transparent w-full border-collapse">
+                        <thead>
+                            <tr>
+                                <th
+                                    class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                                    Title
+                                </th>
+                                <th
+                                    class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                                    Excerpt
+                                </th>
+                                      <th
+                                    class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                                    Difficulty
+                                </th>
 
-            <div class=" mx-0 rounded text-sm text-white">
+                                        <th
+                                    class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                                    Browse Courses
+                                </th>
+                         
+                              
+                              
+                          
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($courses as $course)
+                            <tr>
+                                <td
+                                    class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                                    {!! $course->title !!}
+                                </td>
+                                <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                                    {!! $course->excerpt !!}
+                                </td>
+                           
+
+                                <td>
+                                    <div class=" mx-0 mt-3 p-2 rounded-md text-center text-sm text-white">
                 @if($course->difficulty === 'Easy')
-                <p class="bg-green-500 mx-12 w-24">{{ $course->difficulty }}</p>
+                <p class="bg-green-500 mx-12 p-2 w-24">{{ $course->difficulty }}</p>
                 @elseif($course->difficulty === 'Medium')
-                <p class="bg-yellow-500 mx-12 w-24">{{ $course->difficulty }}</p>
+                <p class="bg-yellow-500 mx-12 p-2 w-24">{{ $course->difficulty }}</p>
                 @elseif($course->difficulty === 'Hard')
-                <p class="bg-red-500 mx-12 w-24">{{ $course->difficulty }}</p>
+                <p class="bg-red-500 mx-12 p-2 w-24">{{ $course->difficulty }}</p>
                 @endif
             </div>
+                                </td>
+                               
+                              <td>
+                                       <a class="bg-blue-500 text-white rounded-md text-center p-1 mt-0" href="/courses/{{$course->slug}}">Browse</a>
+                                </td>
+                                
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-    </article>
-    @endforeach
+    </section>
 
-</div>
+</section>
+@endsection
+
 @endsection
