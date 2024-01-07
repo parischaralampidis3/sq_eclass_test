@@ -1,4 +1,5 @@
 Test Assignment
+----------------
 Create a small e-learning platform that provides information for 50% of enrolled students that completed the assignment. 
 and 60% of students that they are enrolled at the assignment.
 
@@ -90,8 +91,6 @@ types of colums for the tables.
 -
 -----course_students_table
 
-
-
 The models are defined from many to many relationships and between the tables at the datatabase.
 Laravel enables generating dummy data for eloquent model. This operations is handled by factories.
 I generating factories for each corresponding model.
@@ -134,11 +133,11 @@ show a course
 I defined a new get route where I defined a course endpoint and a slug parameter for course.
 This view holds different components, as i tried to experiment with frontend structure.
 
-
 Repository Pattern
 ------------------
 I attempt to refactor the controller applying the repository pattern.
-I created a Repoistory folder at the
+I created a Repository folder at the:
+
 ---App
 -
 -

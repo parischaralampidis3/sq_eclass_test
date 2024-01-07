@@ -12,7 +12,7 @@ class Courses extends Model
 
 /**
  * This array contains properties that through mass assignment, they stay protected.
- * That means, when an update of a requestt at the database,this valuew won't be updated.
+ * That means, when an update of a request at the database,this valuew won't be updated.
  */
     protected $fillable = [
         'student_id',
@@ -22,7 +22,9 @@ class Courses extends Model
         'difficulty'
     ];
 /**
- *Courses models is defined with many to many relationships with students.
+ * Courses models is defined with many to many relationships with students.
+ * More specifically multiple records into a table, are associated with multiple records 
+ * at another table.
  */
     public function students()
     {

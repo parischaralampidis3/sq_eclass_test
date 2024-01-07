@@ -13,7 +13,10 @@ class CourseStudentFactory extends Factory
      *
      * @return array
      */
-
+/**
+ * This extra layer of CoursesStudent factory enables producing dummy data based at the eloquent relationship 
+ * many to many between the tables.
+ */
     public function definition()
     {
         return [

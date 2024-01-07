@@ -11,8 +11,13 @@ class StudentsFactory extends Factory
      *
      * @return array
      */
+
+     /**
+      * Define enrollemnt and completion parameter as an array, and giving the option for random set at the database
+      */
     public function definition()
-    {       $enrollment =  $this->faker->randomElement(['Y', 'N']);
+    {  
+             $enrollment =  $this->faker->randomElement(['Y', 'N']);
             $completion = ($enrollment === 'N') ? 'N' : $this->faker->randomElement(['Y', 'N']);
         return [
             'name' => $this->faker->name,

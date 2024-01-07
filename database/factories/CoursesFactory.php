@@ -26,6 +26,10 @@ class CoursesFactory extends Factory
             'title' => $this->faker->sentence(),
             'excerpt' => $this->faker->sentence(),
             'body' => $this->faker->paragraph(),
+    /**
+     * Based at the courses concept, I figured out that a difficulty option would 
+     * provide more clarity about the course.
+     */
             'difficulty' => $this->faker->randomElement(['Easy', 'Medium','Hard'])
         ];
     }

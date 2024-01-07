@@ -1,9 +1,7 @@
 <?php
-
 namespace App\Http\Controllers;
 use App\Models\Courses;
 use App\Repositories\CoursesRepository;
-
 /**
  * Courses Controller defines the logic for displaying courses with enrolled students.
  */
@@ -13,7 +11,7 @@ use App\Repositories\CoursesRepository;
  * This method returns the view of a dashboard that the courses are displayed.
  */
 /**
- * THe show() method provides results based in the a relationship between courses and enrolled students.
+ * The show() method provides results based in the a relationship between courses and enrolled students.
  * More specifically, a collection of enrolled students is provided, that is related to the courses.
  */
 
@@ -23,7 +21,6 @@ use App\Repositories\CoursesRepository;
   * controller preffered methods into the constructor and reository.
   */
 
-  
 
 class CoursesController extends Controller
 {
