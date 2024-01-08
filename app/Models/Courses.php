@@ -14,6 +14,7 @@ class Courses extends Model
  * This array contains properties that through mass assignment, they stay protected.
  * That means, when an update of a request at the database,this valuew won't be updated.
  */
+
     protected $fillable = [
         'student_id',
         'title',
@@ -25,6 +26,10 @@ class Courses extends Model
  * Courses models is defined with many to many relationships with students.
  * More specifically multiple records into a table, are associated with multiple records 
  * at another table.
+ */
+/**
+ * The belongsToMany method is used, and it expects the related model (Courses::class) 
+ * and the name of the pivot table that joins the two models ('course_student').
  */
     public function students()
     {

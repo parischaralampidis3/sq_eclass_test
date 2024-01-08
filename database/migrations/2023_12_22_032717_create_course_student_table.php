@@ -13,10 +13,11 @@ class CreateCourseStudentTable extends Migration
      */
 
      /**
-      * Course_student_table works as a pivot table. Model relationships for Students and Courses
-       have defined as many to many. This table defines id for students and courses, in order to 
-       enable association between the two tables.
-      *
+      * Course_student_table works as a pivot table.A pivot table is an intermediate table 
+      *that connects the two independent tables using their foreign keys.Model relationships
+      * for Students and Courses
+      * have defined as many to many. This table defines id for students and courses, in order to 
+      * enable association between the two tables.
       */
     public function up()
     {

@@ -14,6 +14,7 @@ class StudentsFactory extends Factory
 
      /**
       * Define enrollemnt and completion parameter as an array, and giving the option for random set at the database
+      * More specific a condition is set where if $enrollment is set to N then completion is also set to N
       */
     public function definition()
     {  

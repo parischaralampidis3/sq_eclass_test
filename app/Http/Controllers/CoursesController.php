@@ -17,16 +17,20 @@ use App\Repositories\CoursesRepository;
 
  /**
   * Implementing courses repository binding at the controller level.
-  * Adding a constructor at the class and passing it, coursesRepository, I try to inject 
-  * controller preffered methods into the constructor and reository.
+  * Adding a constructor at the class and passing it, coursesRepository, I inject at the contorller 
+  * helper functions, in order  to interact with the database.
   */
 
 
 class CoursesController extends Controller
 {
+    /**
+     * Private property prevents external access
+     */
     private $coursesRepository;
 
-    public function __construct(CoursesRepository $coursesRepository ){
+    public function __construct(CoursesRepository $coursesRepository )
+    {
         $this -> coursesRepository = $coursesRepository;
     }
 
@@ -34,7 +38,6 @@ class CoursesController extends Controller
     {
         $courses = $this -> coursesRepository->get();
         return $courses;
-     
     }
 
     public function show(Courses $course)
